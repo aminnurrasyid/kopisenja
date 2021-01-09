@@ -16,6 +16,5 @@ $(document).ready(function(){
 
     //button in footer
     $("#sendfbackBtn").click(function(){
-        location.href="../5-feedback/feedback.html";          //unchanged
-    });
+        location.href="../5-feedback/feedback.html";  
 });
