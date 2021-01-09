@@ -150,7 +150,7 @@ video::-webkit-media-controls {
     padding-top: 2%;
     overflow: hidden;
     position: fixed;
-    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0.9026961126247374) 0%, rgba(0,212,255,0) 80%);
+    /* background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0.9026961126247374) 0%, rgba(0,212,255,0) 80%); */
     top: 0;
 }
 #navlogo{
@@ -219,36 +219,28 @@ video::-webkit-media-controls {
 
 
 .contentSec{
-
   min-width: 100%;
   min-height: 100%;
   position: relative;
   background-color: #EBEBEB;
-
-
 }
 .content-img{
-  min-height: 500px;
-  /* background-color: #09412F; */
-  background-image: url("fb1.png");
-  background-attachment: fixed;
-  background-repeat: no-repeat;
-  background-size: 120% 500px;
+  max-height: 25rem;
+  background-color: #09412F;
 }
 .wordCarousel {
     font-family: Montserrat;
-
     font-weight: normal;
     color: white;
+    text-shadow: 3px 3px black;
     display: flex;
     justify-content: center;
-    padding-top: 15rem;
+    padding-top: 11rem;
     padding-bottom: 12rem;
-
-      }
+}
   .wordCarousel span{
     margin-right: 1rem;
-      font-size: 55px;
+    font-size: 55px;
   }
   .wordCarousel div {
         overflow: hidden;
