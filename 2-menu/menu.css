@@ -743,7 +743,7 @@ footer{
   bottom: 3%;
 }
 #footSocmed li{
-  list-style-type: none;
+  list-style-type: none;   /* list-style-type: specifies the type of list-item marker in a list. */
   margin-left: 30px;
   float: left;
 }
