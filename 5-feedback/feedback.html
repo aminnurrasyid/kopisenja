@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kopi Senja</title>
+  <link rel="icon" href="logo/Logo.png">
+  <link rel="stylesheet" href="feedback.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="feedback.js"></script>
+
+</head>
+
+<body>
+     <div class="contentSec">
+       <div class="content-img">
+         <h4 class="wordCarousel">
+           <span> enjoy kopi and stay</span>
+           <div>
+             <ul class="flip4">
+                <li>CHILL</li>
+                <li>AESTHETIC</li>
+               <li>EXOTIC</li>
+               <li>SAFE</li>
+
+             </ul>
+           </div>
+        </h4>
+       </div>
+       <div class="contentDetails">
+         <div class="feedbackSec">
+            <h3 id="sub-text"> TELL US SOMETHING</h3>
+            <p id="sub-text2">Feel free to leave your message in the details below: </p>
+            <form form class="form" id="form" name="myForm" action="main.html" onsubmit="return validateForm()" method="post">
+                <input class="name" id="fname" type="text" name="fname" placeholder="First Name" required>
+                <input class="name" id="lname" type="text" name="lname" placeholder="Last Name" required><br>
+                <input id="email" type="text" name="email" placeholder="Email Address" required><br>
+                <select class="category" name="category">
+                  <optgroup label="Choose the feedback category">
+                  <option value="1">Suggestion</option>
+                  <option value="2">Appreciation</option>
+                  <option value="3">Food & Beverages</option>
+                  <option value="4">Others</option>
+                </select><br>
+                <textarea name="message" rows="10" placeholder="Please fill in your feedback here" required></textarea>
+
+                <p id=sub-text2>Terms and Conditions </p>
+                <input type="checkbox" name="check" value="1" required>
+                <label for="checkbox" class="cb-label">By checking this box I understand and agree that :</label><br>
+                <p class="sub-text3" id="rule1">1. Kopi Senja has sole direction whether to acknowledge or pay me <br>
+                for my submission. </p>
+                <p class="sub-text3" id="rule2">2. Kopi Senja may contact me via the email address above <br> to follow
+                up on my submission. </p>
+
+              <input class="submitbtn" type="submit" name="submit" value="Submit my feedback">
+            </form>
+         </div>
+         <div class="mailingSec">
+           <h3 id=sub-text> STILL NEED HELP? </h3>
+           <p id=sub-text2> Contact Us Directly : </p>
+           <div class="mailingAdd">
+              <p id="sub-text4">Email Address : kopisenjakafe@gmail.com <br>
+                 Contact number : 60-77325060 <br>
+                 Mailing address : Lot 12, ABC Business Centre,<br>
+                 Subang Jaya, Selangor Darul Ehsan.</p>
+
+                 <div class="bfr-footer">
+
+                 </div>
+           </div>
+         </div>
+       </div>
+     </div>
+
+
+
+    <!--            nav header here         -->
+    <!--            nav header here         -->
+    <!--            nav header here         -->
+    <nav>
+      <div class="navbar">
+          <div id="navlogo"><a href="index.html"><img src="logo/Logo.png" alt="logo"></a></div>
+          <div id="navlistbox"> 
+              <div class="dropdown">
+                  <button class="dropbtn" id="NavhomeBtn">HOME</button>
+              </div>
+                <div class="dropdown">
+                    <button class="dropbtn" id="NavmenuBtn">OUR MENU</button>
+                    <div class="dropdown-content">
+                      <a href="#">Coffee</a>
+                      <a href="#">Desserts</a>
+                      <a href="#">Coffee Bean</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" id="NavnewsBtn">NEWS</button>
+                    <div class="dropdown-content">
+                      <a href="#">Events</a>
+                      <a href="#">Charity</a>
+                    </div>
+                </div>
+                <div class="dropdown">
+                    <button class="dropbtn" id="NavaboutBtn">ABOUT US</button>
+              </div>
+          </div>
+      </div>
+  </nav>
+    <!--        footer section here       -->
+    <!--        footer section here       -->
+    <!--        footer section here       -->
+    <footer>
+      <div id="footMain">
+        <div id="footleft">
+            <div id="footleftUpper">
+                <p><i>We</i> <u>want</u> to hear</p>
+                <p>from <i>you !</i></p>
+                <button type="button" class="basicbtn" id="sendfbackBtn">Send Feedback</button>
+            </div>
+            <div id="footleftLower">
+                <p>&#169; 2008-2020 Kopi Senja. All rights reserved.</p>
+            </div>
+        </div>
+          <div id="footright">
+              <div id="footrightUpper">
+                  <div id="footrightUpperLeft">
+                      <p class="anchorBtm">ABOUT US</p>
+                      <div class="anchorBox">
+                      <ul class="footerLink">
+                          <li><a href="#Events">About</a></li>
+                      </ul>
+                      </div>
+                  </div>
+                  <div id="footrightUpperMid">
+                      <p class="anchorBtm">NEWS</p>
+                      <div class="anchorBox">
+                          <ul class="footerLink">
+                              <li><a href="#Events">Events</a></li>
+                              <li><a href="#Charity">Charity</a></li>
+                          </ul>
+                      </div>
+                  </div>
+                  <div id="footrightUpperRight">
+                      <p class="anchorBtm" id="footMenu">MENU</p>
+                      <div class="anchorBox">
+                      <ul class="footerLink">
+                          <li><a href="#Coffee">Coffee</a></li>
+                          <li><a href="#Desserts">Desserts</a></li>
+                          <li><a href="#CoffeeBeans">Coffee Beans</a></li>
+                      </ul>
+                      </div>
+                      <ul id=footSocmed>
+                          <li><a href="https://www.instagram.com/"><img src="icon/icons8-instagram-48.png" id="IconIg" alt="ig_icon"></a></li>
+                          <li><a href="https://www.facebook.com/"><img src="icon/icons8-facebook-52.png" id="IconFb" alt="fb_icon"></a></li>
+                          <li><a href="https://twitter.com/"><img src="icon/icons8-twitter-48.png" id="IconTw"
+                              alt="tw_icon"></a></li>
+                      </ul>
+                  </div>
+              </div>
+          </div>
+      </div>
+  </footer>
+</body>
+
+</html>

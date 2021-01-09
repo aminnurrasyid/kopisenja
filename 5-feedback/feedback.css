@@ -1,0 +1,550 @@
+/*      Hex Color Code
+        dark green = #09412F
+        grey(bg) = #EBEBEB
+        yellowish(bg) = #FFF6E0
+        orange(button) = #E1B97D
+
+        white = #FFFFFF
+        black = #000000
+*/
+
+
+/*
+                FONTS
+*/
+@font-face {
+    font-family: Gaegu;
+    src: url(fonts/Gaegu-Light.ttf);
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: Gaegu;
+    src: url(fonts/Gaegu-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Gaegu;
+    src: url(fonts/Gaegu-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Light.ttf);
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Medium.ttf);
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-SemiBold.ttf);
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-ExtraBold.ttf);
+    font-weight: bolder;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-ExtraBoldItalic.ttf);
+    font-weight: bolder;
+    font-style: italic;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/*          Universal CSS           */
+/*          Universal CSS           */
+/*          Universal CSS           */
+html{
+    scroll-behavior: smooth;
+}
+html, body{
+    height:100%;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+u{
+    text-decoration: none;
+    border-bottom: 3px solid #FFF6E0;
+}
+video{
+    object-fit: fill;
+    min-height: 100%;
+    width: 100%;
+    transform: translateX(0%) translateY(-30%);      /*  to padd */
+    /* transform: rotateY(0deg);              rotate video here */
+}
+video::-webkit-media-controls {
+    display:none !important;
+}
+.basicbtn{
+    color: #E1B97D;
+    border: 2px solid #E1B97D;
+    background-color: #09412F;
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 75px;
+    padding-right: 75px;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-style: italic;
+}
+.basicbtn:hover{
+    background-color: #E1B97D;
+    color: #09412F;
+    transition: 0.4s;
+}
+
+/*          navigation bar          */
+/*          navigation bar          */
+/*          navigation bar          */
+.navbar{
+    min-height: 200px;
+    width: 100%;
+    padding-top: 2%;
+    overflow: hidden;
+    position: fixed;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0.9026961126247374) 0%, rgba(0,212,255,0) 80%);
+    top: 0;
+}
+#navlogo{
+    position: absolute;
+    left: 5.5%;
+    float: left;
+}
+#navlistbox{
+    position: absolute;
+    right: 2%;
+    float: right;
+    padding-top: 1.5%;
+}
+#currentpg{
+    font-weight: 200;
+}
+.dropbtn {
+    background-color: transparent;
+    color: black;
+    padding: 0px;
+    border: none;
+    font-family: Montserrat;
+    font-size: 20px;
+    margin-right: 40px;
+}
+.dropbtn:focus {
+    outline:none;
+    box-shadow: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    font-family: Montserrat;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}         /* .dropdown */
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn{
+    font-weight: 100;
+    transition: 0.1s;
+}
+
+/*          dont delete this:- to get rid of unnecessary padding & margin            */
+*{
+    margin: 0%;
+    padding: 0%;
+  }
+
+/*demo body, replace your code here */
+/*demo body, replace your code here*/
+/*demo body, replace your code here*/
+
+
+.contentSec{
+
+  min-width: 100%;
+  min-height: 100%;
+  position: relative;
+  background-color: #EBEBEB;
+
+
+}
+.content-img{
+  min-height: 500px;
+  /* background-color: #09412F; */
+  background-image: url("fb1.png");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: 120% 500px;
+}
+.wordCarousel {
+    font-family: Montserrat;
+
+    font-weight: normal;
+    color: white;
+    display: flex;
+    justify-content: center;
+    padding-top: 15rem;
+    padding-bottom: 12rem;
+
+      }
+  .wordCarousel span{
+    margin-right: 1rem;
+      font-size: 55px;
+  }
+  .wordCarousel div {
+        overflow: hidden;
+        position: relative;
+        float: right;
+        height: 65px;
+        padding-top: 10px;
+        margin-top: -17px;
+
+        }
+  .wordCarousel  li {
+            font-family: Gaegu;
+            font-size: 65px;
+            color: white;
+            font-weight: 700;
+            padding: 0 10px;
+            height: 45px;
+            margin-bottom: 45px;
+            display: block;
+}
+
+.flip2 { animation: flip2 6s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip3 { animation: flip3 8s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+.flip4 { animation: flip4 10s cubic-bezier(0.23, 1, 0.32, 1.2) infinite; }
+
+@keyframes flip2 {
+    0% { margin-top: -180px; }
+    5% { margin-top: -90px;  }
+    50% { margin-top: -90px; }
+    55% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
+}
+
+@keyframes flip3 {
+    0% { margin-top: -270px; }
+    5% { margin-top: -180px; }
+    33% { margin-top: -180px; }
+    38% { margin-top: -90px; }
+    66% { margin-top: -90px; }
+    71% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
+}
+
+@keyframes flip4 {
+    0% { margin-top: -360px; }
+    5% { margin-top: -270px; }
+    25% { margin-top: -270px; }
+    30% { margin-top: -180px; }
+    50% { margin-top: -180px; }
+    55% { margin-top: -90px; }
+    75% { margin-top: -90px; }
+    80% { margin-top: 0px; }
+    99.99% { margin-top: 0px; }
+    100% { margin-top: -270px; }
+}
+
+
+.contentDetails{
+
+  margin-left: 5rem;
+  margin-right: 5rem;
+  background-color: #EBEBEB;
+
+
+}
+
+.feedbackSec{
+
+  font-weight: lighter;
+  font-family: Montserrat;
+
+}
+#sub-text{
+  font-weight: bold;
+  font-family: Gaegu;
+  font-size: 40px;
+  color: #09412F;
+  margin-top:2rem;
+  margin-right: 3rem;
+}
+
+#sub-text2{
+  height: 100%;
+  font-weight: lighter;
+  font-family: Montserrat;
+  font-size: 18px;
+  color: black;
+  text-align: left;
+}
+
+.form{
+  font-weight: lighter;
+  font-family: Montserrat;
+  font-size: 14px;
+  line-height: 44px;
+  margin-top: 20px;
+
+}
+
+
+
+.name{
+  width:19%;
+  height: 30px;
+  font-weight: lighter;
+  font-family: Montserrat;
+  padding-left: 5px;
+  border: 1px solid grey;
+  background-color: transparent;
+}
+
+#email{
+    width:39%;
+    height: 30px;
+    font-weight: lighter;
+    font-family: Montserrat;
+    padding-left: 5px;
+    border: 1px solid grey;
+    background-color: transparent;
+}
+
+.category{
+  width:45%;
+  height: 30px;
+  border: 1px solid grey;
+  color: grey;
+  font-weight: lighter;
+  font-family: Montserrat;
+  background-color: transparent;
+  padding-right: 10px;
+
+}
+
+textarea{
+  width:60%;
+  font-weight: lighter;
+  font-family: Montserrat;
+  margin-top: 7px;
+  padding-top: 4px;
+  padding-left: 5px;
+  border : 1px solid grey;
+  background-color: transparent;
+}
+.cb-label{
+  padding-left: 7px;
+}
+
+.sub-text3{
+  font-weight: lighter;
+  font-family: Montserrat;
+  font-size: 14px;
+  margin:0.5rem 2rem;
+  line-height: 1.6;
+}
+
+.submitbtn{
+  width: 200px;
+  height:40px;
+  color: #E1B97D;
+  border: 2px solid #E1B97D;
+  background-color: #EBEBEB;
+  text-align: center;
+  font-style: italic;
+  margin-top: 1rem;
+}
+
+.submitbtn:hover{
+  background-color: #E1B97D;
+  color: #EBEBEB;
+  transition: 0.4s;
+}
+
+.submitbtn:focus {
+    outline:none;
+    box-shadow: none;
+  }
+.mailingSec{
+  margin-top: 2.8rem;
+}
+.mailingAdd{
+  font-family: Montserrat;
+  font-weight: normal;
+  margin-left: 13rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+#sub-text4{
+  font-family: Montserrat;
+  font-weight:SemiBold;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.bfr-footer{
+  height:70px;
+}
+/*  footer related css */
+/*  footer related css */
+/*  footer related css */
+footer{
+    overflow: hidden;
+}
+#footMain{
+    position: relative;
+    overflow: hidden;
+    background-color: #09412F;
+    color:#FFF6E0;
+    width: 100%;
+    /*min-height: 80%;*/
+    font-family: Montserrat;
+    font-weight: normal;
+    letter-spacing: 2px;
+} 
+#footleft{
+    padding-left: 5%;
+    padding-top: 2.1%;
+    float: left;
+}
+#footleftUpper{
+    font-size: 45px;
+}
+#footleftLower{
+    position: absolute;
+    bottom: 3%;
+    font-weight: lighter;
+    font-size: 13px;
+    letter-spacing: 0px;
+}
+#footright{
+    /*width: 35%;*/
+    padding-top: 2.1%;
+    float: right;
+    margin-right: 5%;
+}
+#footrightUpper{
+    min-height: 300px;
+}
+#footrightUpperLeft{
+    float: right;
+    margin-left: 8rem;
+}
+#footrightUpperMid{
+    float: right;
+    margin-left: 8rem;
+}
+#footrightUpperRight{
+    float: right;
+    margin-left: 8rem;
+}
+.anchorBtm{
+    font-weight: bolder;
+    letter-spacing: 0px;
+    margin-bottom: 1rem;
+}
+.footerLink li{
+    list-style-type: none;
+    margin-bottom: 0.3rem;
+}
+.footerLink li a{
+    text-decoration: none;
+    color: #FFF6E0;
+}
+.footerLink li a:hover{
+    color: #E1B97D;
+    transition: 0.1s;
+}
+#footSocmed {
+    right: 5%;
+    position: absolute;
+    bottom: 3%;
+}
+#footSocmed li{
+    list-style-type: none;
+    margin-left: 30px;
+    float: left;
+}
+#IconIg{
+    height: auto; 
+    width: auto; 
+    max-width: 32px; 
+    max-height: 32px;
+}
+#IconFb{
+    height: auto; 
+    width: auto; 
+    max-width: 26px; 
+    max-height: 26px;
+    padding-top: 3px;
+}
+#IconTw{
+    height: auto; 
+    width: auto; 
+    max-width: 28px; 
+    max-height: 28px;
+    padding-top: 3px;
+}
