@@ -16,6 +16,6 @@ $(document).ready(function(){
 
     //button in footer
     $("#sendfbackBtn").click(function(){
-        location.href="index.html";          //unchanged
+        location.href="../5-feedback/feedback.html";          //unchanged
     });
 });
