@@ -152,7 +152,7 @@ u {
   overflow: hidden;
   position: fixed;
   background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0.9026961126247374) 0%, rgba(0,212,255,0) 100%);   // gradient black-white
-  z-index: 200;
+  z-index: 500;
   top: 0;
 }
 #navlogo{
