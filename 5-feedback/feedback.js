@@ -58,15 +58,16 @@ function validateName(fname,lname){
 
 }
 
-function validateAll() {
+function validateAll(myForm) {
   var fname =  document.forms["myForm"]["fname"];
   var lname =  document.forms["myForm"]["lname"];
   var email =  document.forms["myForm"]["email"];
+  var checkbox = document.forms["myForm"]["checkbox"];
 
     var letters = /^[A-Za-z]+$/;
     var mailformat = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
 
-    if (fname.value.match(letters) && lname.value.match(letters)&&email.value.match(mailformat)) {
+    if (fname.value.match(letters) && lname.value.match(letters)&&email.value.match(mailformat)&&myForm.checkbox.checked==false) {
       alert("Success! Thank you ")
       return true;
     }
