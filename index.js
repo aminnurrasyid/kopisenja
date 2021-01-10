@@ -5,18 +5,18 @@ $(document).ready(function(){
         location.href="index.html"; 
     });
     $("#NavmenuBtn").click(function(){   
-        location.href="2-menu/menu.html"; 
+        location.href="./2-menu/menu.html"; 
     });
     $("#NavnewsBtn").click(function(){   
-        location.href="3-news/news.html"; 
+        location.href="./3-news/news.html"; 
     });
     $("#NavaboutBtn").click(function(){   
-        location.href="4-about/about.html"; 
+        location.href="./4-about/about.html"; 
     });
 
     //button in second fold
     $("#readnewsBtn").click(function(){
-        location.href="3-news/news.html";
+        location.href="./3-news/news.html";
     });
     //button in third fold
     $("#browsemenuBtn").click(function(){
