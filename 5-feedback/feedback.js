@@ -69,6 +69,6 @@ function validateAll(myForm) {
 
     if (fname.value.match(letters) && lname.value.match(letters)&&email.value.match(mailformat)&&myForm.checkbox.checked==false) {
       alert("Success! Thank you ")
-      //return true;
+      return true;
     }
 }
