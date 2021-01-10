@@ -1,3 +1,4 @@
+// jQuery for navigation bar button
 $(document).ready(function(){
 
     //buttons in navigation bar
@@ -29,6 +30,7 @@ $(document).ready(function(){
     });
 });
 
+// JavaScript for Pop-Up ads function
 function closePromo() {
     document.querySelector('.promotion').style.display='none';
 }
