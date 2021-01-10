@@ -20,7 +20,7 @@ $(document).ready(function(){
     });
     //button in third fold
     $("#browsemenuBtn").click(function(){
-        location.href="2-menu/menu.html"; 
+        location.href="./2-menu/menu.html"; 
     });
 
     //button in footer
