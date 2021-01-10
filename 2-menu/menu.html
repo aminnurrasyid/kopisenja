@@ -11,6 +11,7 @@
   <script src="menu.js"></script>
   <link rel="icon" href="logo/Logo.png">
   <link rel="stylesheet" href="menu.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
 </head>
 
 <body>
@@ -20,6 +21,29 @@
         <source src="video/CoffeeVid.mp4" type="video/mp4" id="bg">
       </video>
       <h1 id="text">Delicious <br> Premium <br> Ingredients<br></h1>
+        <script>
+        // Wrap every letter in a span
+        var textWrapper = document.querySelector('.ml3');
+        textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letter'>$&</span>");
+
+        // take from animation library
+        anime.timeline({
+            loop: false
+          })
+          .add({
+            targets: '.ml3 .letter',
+            opacity: [0, 1],
+            easing: "easeInOutQuad",
+            duration: 2250,
+            delay: (el, i) => 150 * (i + 1)
+          }).add({
+            targets: '.ml3',
+            opacity: 100,
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 1000
+          });
+      </script>
     </header>
 
     <!-- DRINKS -->
