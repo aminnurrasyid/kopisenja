@@ -1,0 +1,660 @@
+/*      Hex Color Code
+        dark green = #09412F
+        grey(bg) = #EBEBEB
+        yellowish(bg) = #FFF6E0
+        orange(button) = #E1B97D
+
+        white = #FFFFFF
+        black = #000000
+*/
+
+
+/*          
+                FONTS         
+*/
+@font-face {
+    font-family: Gaegu;
+    src: url(fonts/Gaegu-Light.ttf);
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: Gaegu;
+    src: url(fonts/Gaegu-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Gaegu;
+    src: url(fonts/Gaegu-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Light.ttf);
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Medium.ttf);
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-SemiBold.ttf);
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-ExtraBold.ttf);
+    font-weight: bolder;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-ExtraBoldItalic.ttf);
+    font-weight: bolder;
+    font-style: italic;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/*          Universal CSS           */
+/*          Universal CSS           */
+/*          Universal CSS           */
+html{
+    scroll-behavior: smooth;
+}
+html, body{
+    height:100%; 
+}
+::-webkit-scrollbar { 
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent; 
+}
+::-webkit-scrollbar-thumb {
+    background: #888; 
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+u{
+    text-decoration: none;
+    border-bottom: 3px solid #FFF6E0;
+}
+video{
+    object-fit: fill;
+    min-height: 100%;
+    width: 100%;
+    transform: translateX(0%) translateY(-30%);      /*  to pad */
+    /* transform: rotateY(0deg);              rotate video here */
+}
+video::-webkit-media-controls {
+    display:none !important;
+}
+.basicbtn{
+    color: #E1B97D;
+    border: 2px solid #E1B97D;
+    background-color: #09412F;
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 75px;
+    padding-right: 75px;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-style: italic;
+}
+.basicbtn:hover{
+    background-color: #E1B97D;
+    color: #09412F;
+    transition: 0.4s;
+}
+
+
+
+/*          navigation bar          */
+/*          navigation bar          */
+/*          navigation bar          */
+.navbar{
+    min-height: 200px;
+    width: 100%;
+    padding-top: 2%;
+    overflow: hidden;
+    position: fixed;
+    /* background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0.9026961126247374) 0%, rgba(0,212,255,0) 80%); */
+    top: 0;
+}
+#navlogo{
+    position: absolute;
+    left: 5.5%;
+    float: left;
+}
+#navlistbox{
+    position: absolute;
+    right: 2%;
+    float: right;
+    padding-top: 1.5%;
+}
+#currentpg{
+    font-weight: 200;
+}
+.dropbtn {
+    background-color: transparent;
+    color: black;
+    padding: 0px;
+    border: none;
+    font-family: Montserrat;
+    font-size: 20px;
+    margin-right: 40px;
+}
+.dropbtn:focus {
+    outline:none;
+    box-shadow: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    font-family: Montserrat;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}         /* .dropdown */
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn{
+    font-weight: 100;
+    transition: 0.1s;
+}
+
+/*          to get rid of unnecessary padding & margin            */
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+
+
+/*  entire body CSS   */
+/*  entire body CSS   */
+/*  entire body CSS   */
+.section{
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+}
+.headings1{
+    font-family: Gaegu;
+    font-weight: bold;
+    font-size: 250%;
+    color: #09412F;
+}
+
+    /*  first fold   */
+    /*  first fold   */
+
+#firstSec{
+    background-color: #EBEBEB;
+}
+#cafe1_frame{
+    float: left;
+    width: 43%;
+    min-height: 100%;
+    background-image: url("./image/cafe1.jpg");
+    background-size: 43% 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#firstFold_right{
+    min-height: 100%;  
+    font-family: Montserrat; 
+}
+#firstFoldR_Content{
+    margin-top: 180px;
+    margin-left: 140px;
+    min-width: 400px;
+    min-height: 100px;   
+    display: inline-block;
+}
+#firstFoldR_Content #description{
+    margin-top: 10px;
+    margin-bottom: 10px;
+    line-height: 23px;
+}
+#firstFoldR_Content #socmed_btn{
+    margin-top: 20px;
+}
+#socmedList{
+    list-style-type: none;
+
+}
+#socmedList li{
+    float: left;
+    margin-right: 20px;
+}
+#IconIgMain{
+    margin-top: 3px;
+    margin-left: 0px;
+    max-width: 50px; 
+    max-height: 50px;
+}
+#IconFbMain{
+    height: auto; 
+    width: auto; 
+    max-width: 22px; 
+    max-height: 22px;
+    padding-top: 3px;
+}
+#IconTwMain{
+    height: auto; 
+    width: auto; 
+    max-width: 28px; 
+    max-height: 28px;
+    padding-top: 1px;
+}
+#anchordown_1st{
+    position: absolute;
+    left: 48.3%; /* 47.6% */
+    top: 90%;
+    min-height: 40px;
+    min-width: 40px;
+    text-align: center;
+    font-weight: 200;
+}
+.arrowdown{
+    margin-top: 3px;
+}
+.arrowdown:hover{
+    transition: 0.4s;
+    margin-top: 8px;
+}
+
+    /*  second fold   */
+    /*  second fold   */
+
+#secondSec{
+    background-color: #EBEBEB;
+    display: flex;
+}
+#secondSec #secondSec_Left{
+    display: inline-block;
+    min-height: 100%;
+    min-width: 60.72%; 
+}
+
+.decotext{
+    font-family: Montserrat;
+    margin-top: 15%;
+    margin-left: 22%;
+    margin-right: 10%;
+    text-align: center;
+}
+.underline-animate{
+    display: inline-block;
+    z-index: 1;
+}
+.underline-animate::after{
+    content: '';
+    width: 0px;
+    height: 5px;
+    display: block;
+    background: black;
+    transition: 300ms;
+}
+.underline-animate:hover::after{
+    width: 100%;
+}
+.decotext button{
+    background-color: #EBEBEB;
+}
+#secondSecL_text1{
+    font-weight: 200;
+    font-size: 120%;
+    margin-top: 40px;
+}
+#secondSecL_text2{
+    position: relative;
+    font-size: 360%;
+    margin-bottom: 40px;
+}
+#worthyF{
+    font-weight: 200;
+}
+#boxarrow2{
+    padding: 0%;
+    position: absolute;
+    left: 50%;
+    top: 92%;
+}
+#videoframe{
+    min-height: 100%;
+    overflow: hidden;
+}
+
+    /*  third fold   */
+    /*  third fold   */
+
+#thirdSec{
+    background-image: linear-gradient(#EBEBEB, #FFF6E0);
+}
+#thirdSecL{
+    float: left;
+    min-height: 100%;
+    width: 60.72%; 
+}
+#thirdSecR{
+    overflow: hidden;
+    min-height: 100%;
+}
+.ml11 {
+    color: #09412F;
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 1.5em;
+}
+.ml11 .text-wrapper {
+    position: relative;
+    display: inline-block;
+    padding-top: 0.1em;
+    padding-right: 0.05em; /* 0.05 */
+    padding-bottom: 0.15em; /*0.15 */
+}
+.ml11 .line {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 3px;
+    background-color: black;
+    transform-origin: 0 50%;
+}
+.ml11 .line1 { 
+    top: 0; 
+    left: 0;
+}
+.ml11 .letter {
+    display: inline-block;
+    line-height: 1em;
+}
+#thirdSecL_Content{
+    text-align: center;
+    width: 53.5%;
+    margin-top: 24%;
+    margin-left: 30%;
+    font-family: Montserrat;
+    font-weight: 200;
+    line-height: 130%;
+}
+#thirdSecL button{
+    background-color: transparent;
+}
+#thirdSecL button:hover{
+    background-color: #E1B97D;
+}
+#thirdHeadings{
+    line-height: 80%;
+}
+#thirdSecL_text1{
+    margin-top: 1.5vh;
+    font-size: 110%;
+}
+#thirdSecL_text2{
+    margin-top: 4%;
+    margin-bottom: 10%;
+    font-size: 110%;
+}
+#handpng{
+    overflow: hidden;
+    float: right;
+    width: 80%;
+}
+#endSec{
+    width: 100%;
+    min-height: 5%;           
+    background-color: #FFF6E0;
+}
+
+
+    /*  popup layer   */
+    /*  popup layer   */
+
+.promotion{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    top: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+.promo-content{
+    width: 50rem;
+    height: 25rem;
+    background-color: #EBEBEB;
+    border-radius: 6px;
+    position: relative;
+}
+.close{
+    width:20px;
+    font-family: Montserrat;
+    font-weight: bolder;
+    font-size: 30px;
+    margin-top: 1rem;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 0;
+    right: 25px;
+}
+.close:hover{
+    cursor: pointer;
+}
+.promo-img{
+    width: 22rem;
+    height: 15.5rem;
+    background-image: url(./image/promo1.png);
+    background-size: 100% 100%;
+    float: left;
+    margin-top: 5rem;
+}
+.promo-text{
+    color: black;
+    width: 25rem;
+    height: 18rem;
+    text-align: center;
+    font-weight: bold;
+    font-family: Montserrat;
+    float:right;
+    font-size: 18px;
+    margin-top: 4rem;
+    margin-right: 2.8rem;
+    line-height: 40px;
+}
+.promo-title{
+
+    line-height: 45px;
+}
+#main-text{
+    font-size: 38px;
+    color: #09412F;
+}
+#promo-details1{
+    font-weight:SemiBold;
+    font-family: Montserrat;
+    font-size: 48px;
+    color: #09412F;
+}
+.promo-details{
+
+    text-align: center;
+    font-family: Montserrat;
+    line-height: 25px;
+    margin-top: 1.5rem;
+
+}
+#promo-details2{
+    font-weight: normal;
+    font-size: 20px;
+}
+#promo-details3{
+    font-weight: bold;
+    font-size: 20px;
+}
+#promo-details4{
+    font-size: 18px;
+}
+.promo-notice{
+    text-align: center;
+    font-weight: normal;
+    font-family: Montserrat;
+    line-height: 12px;
+    font-size: 12px;
+    margin-top: 5.5rem;
+}
+
+
+
+/*  footer related css */
+/*  footer related css */
+/*  footer related css */
+footer{
+    overflow: hidden;
+}
+#footMain{
+    position: relative;
+    overflow: hidden;
+    background-color: #09412F;
+    color:#FFF6E0;
+    width: 100%;
+    /*min-height: 80%;*/
+    font-family: Montserrat;
+    font-weight: normal;
+    letter-spacing: 2px;
+} 
+#footleft{
+    padding-left: 5%;
+    padding-top: 2.1%;
+    float: left;
+}
+#footleftUpper{
+    font-size: 45px;
+}
+#footleftLower{
+    position: absolute;
+    bottom: 3%;
+    font-weight: lighter;
+    font-size: 13px;
+    letter-spacing: 0px;
+}
+#footright{
+    /*width: 35%;*/
+    padding-top: 2.1%;
+    float: right;
+    margin-right: 5%;
+}
+#footrightUpper{
+    min-height: 300px;
+}
+#footrightUpperLeft{
+    float: right;
+    margin-left: 8rem;
+}
+#footrightUpperMid{
+    float: right;
+    margin-left: 8rem;
+}
+#footrightUpperRight{
+    float: right;
+    margin-left: 8rem;
+}
+.anchorBtm{
+    font-weight: bolder;
+    letter-spacing: 0px;
+    margin-bottom: 1rem;
+}
+.footerLink li{
+    list-style-type: none;
+    margin-bottom: 0.3rem;
+}
+.footerLink li a{
+    text-decoration: none;
+    color: #FFF6E0;
+}
+.footerLink li a:hover{
+    color: #E1B97D;
+    transition: 0.1s;
+}
+#footSocmed {
+    right: 5%;
+    position: absolute;
+    bottom: 3%;
+}
+#footSocmed li{
+    list-style-type: none;
+    margin-left: 30px;
+    float: left;
+}
+#IconIg{
+    height: auto; 
+    width: auto; 
+    max-width: 32px; 
+    max-height: 32px;
+}
+#IconFb{
+    height: auto; 
+    width: auto; 
+    max-width: 26px; 
+    max-height: 26px;
+    padding-top: 3px;
+}
+#IconTw{
+    height: auto; 
+    width: auto; 
+    max-width: 28px; 
+    max-height: 28px;
+    padding-top: 3px;
+}
