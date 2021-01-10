@@ -399,7 +399,10 @@ textarea{
 }
 
 .submitbtn{
-  width: 200px;
+  font-size: 16px;
+  font-weight: bold;
+  width: 250px;
+  height: 50px;
   height:40px;
   color: #E1B97D;
   border: 2px solid #E1B97D;
@@ -413,6 +416,7 @@ textarea{
   background-color: #E1B97D;
   color: #EBEBEB;
   transition: 0.4s;
+  color: #09412F;
 }
 
 .submitbtn:focus {
