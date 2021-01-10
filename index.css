@@ -9,6 +9,7 @@
 */
 
 
+
 /*          
                 FONTS         
 */
@@ -96,7 +97,7 @@ html{
 html, body{
     height:100%; 
 }
-::-webkit-scrollbar { 
+::-webkit-scrollbar {                   /* Scroll Bar */     
     width: 10px;
 }
 ::-webkit-scrollbar-track {
@@ -116,13 +117,13 @@ video{
     object-fit: fill;
     min-height: 100%;
     width: 100%;
-    transform: translateX(0%) translateY(-30%);      /*  to pad */
-    /* transform: rotateY(0deg);              rotate video here */
+    transform: translateX(0%) translateY(-30%);                 /*  to pad  the video inside a div */
+    /* transform: rotateY(0deg);                        rotate video here */
 }
 video::-webkit-media-controls {
     display:none !important;
 }
-.basicbtn{
+.basicbtn{                      /* basic button design */
     color: #E1B97D;
     border: 2px solid #E1B97D;
     background-color: #09412F;
@@ -194,7 +195,6 @@ video::-webkit-media-controls {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-
 }
 .dropdown-content a {
     color: black;
@@ -202,12 +202,14 @@ video::-webkit-media-controls {
     text-decoration: none;
     display: block;
 }
-.dropdown-content a:hover {background-color: #ddd;}         /* .dropdown */
+.dropdown-content a:hover {background-color: #ddd;}    
 .dropdown:hover .dropdown-content {display: block;}
 .dropdown:hover .dropbtn{
     font-weight: 100;
     transition: 0.1s;
 }
+
+
 
 /*          to get rid of unnecessary padding & margin            */
 *{
@@ -217,10 +219,10 @@ video::-webkit-media-controls {
 
 
 
-/*  entire body CSS   */
-/*  entire body CSS   */
-/*  entire body CSS   */
-.section{
+/*              entire body CSS         */
+/*              entire body CSS         */
+/*              entire body CSS         */
+.section{                       /* class of full fold div */
     width: 100%;
     height: 100%;
     min-height: 100%;
@@ -269,7 +271,6 @@ video::-webkit-media-controls {
 }
 #socmedList{
     list-style-type: none;
-
 }
 #socmedList li{
     float: left;
@@ -324,7 +325,6 @@ video::-webkit-media-controls {
     min-height: 100%;
     min-width: 60.72%; 
 }
-
 .decotext{
     font-family: Montserrat;
     margin-top: 15%;
@@ -457,7 +457,6 @@ video::-webkit-media-controls {
     background-color: #FFF6E0;
 }
 
-
     /*  popup layer   */
     /*  popup layer   */
 
@@ -515,7 +514,6 @@ video::-webkit-media-controls {
     line-height: 40px;
 }
 .promo-title{
-
     line-height: 45px;
 }
 #main-text{
@@ -529,12 +527,10 @@ video::-webkit-media-controls {
     color: #09412F;
 }
 .promo-details{
-
     text-align: center;
     font-family: Montserrat;
     line-height: 25px;
     margin-top: 1.5rem;
-
 }
 #promo-details2{
     font-weight: normal;
@@ -558,9 +554,9 @@ video::-webkit-media-controls {
 
 
 
-/*  footer related css */
-/*  footer related css */
-/*  footer related css */
+/*              footer related css      */
+/*              footer related css      */
+/*              footer related css      */
 footer{
     overflow: hidden;
 }
