@@ -1,0 +1,641 @@
+/*      Hex Color Code
+        dark green = #09412F
+        grey(bg) = #EBEBEB
+        yellowish(bg) = #FFF6E0
+        orange(button) = #E1B97D
+
+        white = #FFFFFF
+        black = #000000
+*/
+
+
+/*
+                FONTS
+*/
+@font-face {
+    font-family: Gaegu;
+    src: url(fonts/Gaegu-Light.ttf);
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: Gaegu;
+    src: url(fonts/Gaegu-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: Gaegu;
+    src: url(fonts/Gaegu-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Light.ttf);
+    font-weight: lighter;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Medium.ttf);
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-SemiBold.ttf);
+    font-weight: 100;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Bold.ttf);
+    font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-BoldItalic.ttf);
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-ExtraBold.ttf);
+    font-weight: bolder;
+    font-style: normal;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-ExtraBoldItalic.ttf);
+    font-weight: bolder;
+    font-style: italic;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Italic.ttf);
+    font-weight: normal;
+    font-style: italic;
+}
+@font-face {
+    font-family: Montserrat;
+    src: url(fonts/Montserrat-Regular.ttf);
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+
+/*          Universal CSS           */
+/*          Universal CSS           */
+/*          Universal CSS           */
+html{
+    scroll-behavior: smooth;
+}
+html, body{
+    height:100%;
+}
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background: #888;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+u{
+    text-decoration: none;
+    border-bottom: 3px solid #FFF6E0;
+}
+video{
+    object-fit: fill;
+    min-height: 100%;
+    width: 100%;
+    transform: translateX(0%) translateY(-30%);      /*  to padd */
+    /* transform: rotateY(0deg);              rotate video here */
+}
+video::-webkit-media-controls {
+    display:none !important;
+}
+.basicbtn{
+    color: #E1B97D;
+    border: 2px solid #E1B97D;
+    background-color: #09412F;
+    margin-top: 0px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 75px;
+    padding-right: 75px;
+    font-size: 18px;
+    font-family: Montserrat;
+    font-style: italic;
+}
+.basicbtn:hover{
+    background-color: #E1B97D;
+    color: #09412F;
+    transition: 0.4s;
+}
+
+/*          navigation bar          */
+/*          navigation bar          */
+/*          navigation bar          */
+.navbar{
+    min-height: 200px;
+    width: 100%;
+    padding-top: 2%;
+    overflow: hidden;
+    position: fixed;
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(255,255,255,0.9026961126247374) 0%, rgba(0,212,255,0) 80%);
+    top: 0;
+}
+#navlogo{
+    position: absolute;
+    left: 5.5%;
+    float: left;
+}
+#navlistbox{
+    position: absolute;
+    right: 2%;
+    float: right;
+    padding-top: 1.5%;
+}
+#currentpg{
+    font-weight: 200;
+}
+.dropbtn {
+    background-color: transparent;
+    color: black;
+    padding: 0px;
+    border: none;
+    font-family: Montserrat;
+    font-size: 20px;
+    margin-right: 40px;
+}
+.dropbtn:focus {
+    outline:none;
+    box-shadow: none;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+.dropdown-content {
+    font-family: Montserrat;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+
+}
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+.dropdown-content a:hover {background-color: #ddd;}         /* .dropdown */
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn{
+    font-weight: 100;
+    transition: 0.1s;
+}
+
+/*          dont delete this:- to get rid of unnecessary padding & margin            */
+*{
+    margin: 0%;
+    padding: 0%;
+}
+
+/*demo body, replace your code here */
+/*demo body, replace your code here*/
+/*demo body, replace your code here*/
+body{  background-color: #EBEBEB;}
+.section{
+    width: 100%;
+    height: 100%;
+    min-height: 100%;
+    position: relative;
+}
+.headings1{
+    font-family: Gaegu;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10%;
+    color: #09412F;
+}
+
+#anchordown_1st{
+    position: absolute;
+    left: 48.3%; /* 47.6% */
+    top: 90%;
+    min-height: 40px;
+    min-width: 40px;
+    text-align: center;
+    font-weight: 200;
+}
+.arrowdown{
+    margin-top: 3px;
+}
+.arrowdown:hover{
+    transition: 0.4s;
+    margin-top: 8px;
+}
+
+.event{
+    margin-top: 1%;
+    width: 40rem;
+    font-family: Montserrat;
+}
+#eventWord{
+    font-size: 40px;
+}
+#event1{
+  font-size: 18px;
+}
+.alert{
+margin-left: 5%;
+margin-right: 5%;
+margin-top: 10%;
+}
+.alertLeft{
+  float: left;
+  min-height: 100%;
+  width: 50%;
+}
+.leftcontent{
+  margin-left: 25%;
+  text-align: center;
+}
+.Ltext{
+  font-family: Montserrat;
+  font-size: 20px;
+  font-weight: bolder;
+  color: navy;
+  text-align: center;
+}
+.heading3{
+
+  font-family: Gaegu;
+  font-size: 20px;
+  font-weight: bold;
+  color: red;
+  text-align: center;
+
+}
+.message{
+margin-top: 0.5rem;
+font-size: 105%;
+font-family: Montserrat;
+text-align: justify;
+
+}
+.alertRight{
+  overflow: hidden;
+  min-height: 100%;
+  width: 50%;
+
+}
+#deliveryjpg{
+  overflow: hidden;
+  float: right;
+  width: 70%;
+  min-height: 100%;
+}
+
+/*     Charity fold   */
+#secondSec{
+    background-image: linear-gradient(#EBEBEB, #FFF6E0);
+}
+#secondSecL{
+    min-height: 100%;
+    width: 100%;
+}
+#secondSecL_Content{
+    margin-top: 0%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: Montserrat;
+    line-height: 180%;
+}
+#CharitiHeadingTxt{
+    margin-left: 2rem;
+    margin-top: 1.7rem;
+}
+#charitypicBox{
+    margin-top: 1rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+}
+.square-picbox{
+    min-width: 17%;
+    min-height: 17%;
+}
+#photo1{
+    background-image: url("pexels-bruna-saito-1805843.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-width: 15rem;
+    min-height: 15rem;
+}
+#photo2{
+    background-image: url("pexels-rebecca-zaal-764681.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#photo3{
+    background-image: url("pexels-lina-kivaka-1741230.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#photo4{
+    background-image: url("pexels-pixabay-159823.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+#secondHeadings{
+    display: flex;
+    line-height: 90%;
+    font-size: 300%;
+}
+#SecL_text1{
+    font-size: 38px;
+    max-width: 60rem;
+    font-weight:bold;
+    text-align: left;
+    line-height: 2.4rem;
+}
+#SecL_text2{
+    margin-top: 1rem;
+    max-width: 60rem;
+    font-size: 20px;
+    text-align: left;
+}
+
+
+
+
+
+
+/*  footer related css */
+/*  footer related css */
+/*  footer related css */
+footer{
+    overflow: hidden;
+}
+#footMain{
+    position: relative;
+    overflow: hidden;
+    background-color: #09412F;
+    color:#FFF6E0;
+    width: 100%;
+    /*min-height: 80%;*/
+    font-family: Montserrat;
+    font-weight: normal;
+    letter-spacing: 2px;
+} 
+#footleft{
+    padding-left: 5%;
+    padding-top: 2.1%;
+    float: left;
+}
+#footleftUpper{
+    font-size: 45px;
+}
+#footleftLower{
+    position: absolute;
+    bottom: 3%;
+    font-weight: lighter;
+    font-size: 13px;
+    letter-spacing: 0px;
+}
+#footright{
+    /*width: 35%;*/
+    padding-top: 2.1%;
+    float: right;
+    margin-right: 5%;
+}
+#footrightUpper{
+    min-height: 300px;
+}
+#footrightUpperLeft{
+    float: right;
+    margin-left: 8rem;
+}
+#footrightUpperMid{
+    float: right;
+    margin-left: 8rem;
+}
+#footrightUpperRight{
+    float: right;
+    margin-left: 8rem;
+}
+.anchorBtm{
+    font-weight: bolder;
+    letter-spacing: 0px;
+    margin-bottom: 1rem;
+}
+.footerLink li{
+    list-style-type: none;
+    margin-bottom: 0.3rem;
+}
+.footerLink li a{
+    text-decoration: none;
+    color: #FFF6E0;
+}
+.footerLink li a:hover{
+    color: #E1B97D;
+    transition: 0.1s;
+}
+#footSocmed {
+    right: 5%;
+    position: absolute;
+    bottom: 3%;
+}
+#footSocmed li{
+    list-style-type: none;
+    margin-left: 30px;
+    float: left;
+}
+#IconIg{
+    height: auto; 
+    width: auto; 
+    max-width: 32px; 
+    max-height: 32px;
+}
+#IconFb{
+    height: auto; 
+    width: auto; 
+    max-width: 26px; 
+    max-height: 26px;
+    padding-top: 3px;
+}
+#IconTw{
+    height: auto; 
+    width: auto; 
+    max-width: 28px; 
+    max-height: 28px;
+    padding-top: 3px;
+}
+
+
+* {box-sizing: border-box}
+body { margin:0}
+.mySlides {
+    display: none;
+}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-height: 40%;
+  border: solid black;
+  max-width: 100%;
+  position: relative;
+  margin: auto;
+}
+#firsFold{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+}
+#firsFoldSmaller{
+    padding-top: 7%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: white;
+  font-size: 60px;
+  padding: 18px 22px;
+  position: absolute;
+  width: 100%;
+  top: 40%;
+  text-align: center;
+  font-family: Montserrat;
+  font-weight: bold;
+  text-shadow: 3px 3px black;
+  
+}
+#customLatte{
+    top: 35%;
+    line-height: 3.2rem;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .prev, .next,.text {font-size: 11px}
+}
+
+/*  Covid 19 News  */
+#containercov{
+    position: relative;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
+    margin-left: 5%;
+    margin-right: 5%;
+    min-height: 18rem;
+    background-color: #09412F;
+    text-align: center;
+}
+#firstfoldCov{
+    display: flex;
+    padding-top: 3%;
+    padding-bottom: 3%;
+    min-height: 60%;
+    justify-content: center;
+}
+#covHead{
+    padding-top: 30px;
+    font-family: Montserrat;
+    letter-spacing: 5px;
+    color: #FFF;
+}
+.infoBox{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    padding-right: 5%;
+    margin-left: 5%;
+    text-align: center;
+    color: white;
+}
+.infoBox h1{
+    margin-top: 10px;
+    font-family: Montserrat;
+    font-weight: normal;
+    font-size: 20px;
+    letter-spacing: 2px;
+}
+.infoBox p{
+  font-family: Montserrat;
+  letter-spacing: 5px;
+  font-size: 50px;
+}
+#totalcase{
+    border-right: solid white;
+}
+#activecase{
+    border-right: solid white;
+}
+#recovered{
+    border-right: solid white;
+}
+#death{
+
+}
