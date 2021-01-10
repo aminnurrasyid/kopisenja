@@ -70,7 +70,7 @@ function validateAll(myForm) {
     var mailformat = /^[a-zA-Z0-9.!#$%&'+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)$/;
 
     if (fname.value.match(letters) && lname.value.match(letters) && email.value.match(mailformat)
-        && myForm.checkbox.checked == true && message=="") {
+        && myForm.checkbox.checked == true && message.value!="") {
       alert("Success! Thank you ");
       return true;
     }
