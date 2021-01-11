@@ -2,7 +2,7 @@ $(document).ready(function(){
 
   //buttons in navigation bar
   $("#NavhomeBtn").click(function(){
-      location.href="./index.html";
+      location.href="../index.html";
   });
   $("#NavmenuBtn").click(function(){
       location.href="../2-menu/menu.html";
