@@ -6,8 +6,8 @@ such as transaction. Apart from that, we do not take this fact of “low-complex
 venture down through the designing rabbit hole! (as a student of INFO 2302)
 
 Group Member
-- Amin Nur Rasyid
-- Farisya Aqilah
-- Hilda Fadzir
-- Abdul Haziq
-- Ihsan
+- Amin Nur Rasyid (1919555)
+- Farisya Aqilah (1919614) 
+- Hilda Fadzir (1919268) 
+- Abdul Haziq (1917923) 
+- Muhammad Ihsan (1919939)
